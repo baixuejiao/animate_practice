@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+
+		.container{
+			width: 100%;
+			height: 180px;
+			margin: 10px auto;
+			position: relative;
+			background: #ff8903;
+		}
+
+		@keyframes example{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius:28px;
+
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -14px 0 0 -14px;
+			}
+			90%{
+				to{
+					width: 174px;
+					height: 174px;
+					border-radius: 180px;
+
+					opacity: 1;
+
+					position: absolute;
+					left: 50%;
+					top: 50%;
+
+					margin: -90px 0 0 -90px;
+					transform: scale(165px);
+					-webkit-transform: scale(165px);
+				}
+			}
+			
+		}
+
+		@-webkit-keyframes example{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius: 28px;
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -14px 0 0 -14px;
+
+			}
+			
+			to{
+				width: 174px;
+				height: 174px;
+				border-radius: 180px;
+				opacity: 1;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -90px 0 0 -90px;
+			}
+		}
+		
+		.circle{
+			width: 174px;
+			height: 174px;
+			border-radius: 180px;
+			border: 3px solid #ffb868;
+			
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			margin: -90px 0 0 -90px;
+
+			animation: example 1s;
+			-webkit-animation: example 1s;
+		}
+		@keyframes ring{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius: 22px;
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -11px 0 0 -11px;
+
+			}
+			
+			to{
+				width: 160px;
+				height: 160px;
+				border-radius: 162px;
+				opacity: 1;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -81px 0 0 -81px;
+			}
+		}
+
+		@-webkit-keyframes ring{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius: 22px;
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -11px 0 0 -11px;
+			}
+			
+			to{
+				width: 160px;
+				height: 160px;
+				border-radius: 162px;
+				opacity: 1;
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin: -81px 0 0 -81px;
+			}
+		}
+
+		.ring{
+			width: 160px;
+			height: 160px;
+			border: 1px solid #fea137;
+			border-radius: 162px;
+
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			margin: -81px 0 0 -81px;
+
+			animation: ring 1.5s;
+			-webkit-animation: ring 1.5s ;
+		}
+
+		/**
+		*
+		**/
+
+		@keyframes round{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius: 20px;
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 40%;
+
+				margin: -10px 0 0 -10px;
+
+			}
+			
+			to{
+				width: 60px;
+				height: 60px;
+				border-radius: 60px;
+				opacity: 1;
+
+				position: absolute;
+				left: 50%;
+				top: 40%;
+
+				margin: -30px 0 0 -30px;
+			}
+		}
+
+		@-webkit-keyframes round{
+			from{
+				width: 20px;
+				height: 20px;
+				border-radius: 20px;
+				opacity: 0;
+
+				position: absolute;
+				left: 50%;
+				top: 40%;
+
+				margin: -10px 0 0 -10px;
+
+			}
+			
+			to{
+				width: 60px;
+				height: 60px;
+				border-radius: 60px;
+				opacity: 1;
+
+				position: absolute;
+				left: 50%;
+				top: 40%;
+
+				margin: -30px 0 0 -30px;
+			}
+		}
+
+		.round{
+			width: 60px;
+			height: 60px;
+			border-radius: 60px;
+			background: #fff;
+
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			margin: -30px 0 0 -30px;
+
+			animation: round 2s;
+			-webkit-animation: round 2s ;
+		}
+	
+		@keyframes warning{
+			from{
+				opacity: 0;
+			}
+			
+			to{
+				opacity: 1;
+			}
+		}
+
+
+		@-webkit-keyframes warning{
+			from{	
+				opacity: 0;
+			}
+			
+			to{
+				opacity: 1;
+			}
+		}
+
+		.round:after{
+			content: "";
+			display: inline-block;
+			width: 8px;
+			height: 33px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -17px 0 0 -4px;
+			background: url(exclamation.jpg) no-repeat;
+			background-size: 8px auto;
+
+			animation: waring 4s;
+			-webkit-animation: waring 4s;
+		}
+
+
+		@-keyframes content{
+			from{
+				font-size: 12px;
+				opacity: 0;
+			}
+			
+			to{
+				font-size: 14px;
+				opacity: 1;
+			}
+		}
+		@-webkit-keyframes content{
+			from{	
+				font-size: 12px;
+				opacity: 0;
+			}
+			
+			to{
+				width: 100%;
+				opacity: 1;
+			}
+		}
+
+		.text{
+			font-size: 14px;
+			width: 100%;
+
+			text-align: center;
+			color: #fff;
+			position: absolute;
+			top: 65%;
+
+			animation: content 3s;
+			-webkit-animation: content 3s;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="circle"></div>
+		<div class="ring"></div>
+		<div class="round"></div>
+		<span class="text">Hello Word</span>
+	</div>		
+
+</body>
+</html>
